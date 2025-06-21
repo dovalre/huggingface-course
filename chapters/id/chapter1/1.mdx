@@ -9,53 +9,151 @@
 
 <Youtube id="00GKzGyWFEs" />
 
-Pada kursus ini, anda akan belajar mengenai _natural language processing_ (pemrosesan bahasa natural) atau NLP menggunakan modul-modul dari ekosistem [Hugging Face](https://huggingface.co/) - [🤗 Transformers](https://github.com/huggingface/transformers), [🤗 Datasets](https://github.com/huggingface/datasets), [🤗 Tokenizers](https://github.com/huggingface/tokenizers), and [🤗 Accelerate](https://github.com/huggingface/accelerate) — as well as the [Hugging Face Hub](https://huggingface.co/models). Kursus ini 100% gratis tanpa iklan.
+Kursus ini akan mengajarkan Anda tentang model bahasa besar (LLM) dan pemrosesan bahasa alami (NLP) menggunakan pustaka dari ekosistem [Hugging Face](https://huggingface.co/) — [🤗 Transformers](https://github.com/huggingface/transformers), [🤗 Datasets](https://github.com/huggingface/datasets), [🤗 Tokenizers](https://github.com/huggingface/tokenizers), dan [🤗 Accelerate](https://github.com/huggingface/accelerate) — serta [Hugging Face Hub](https://huggingface.co/models). 
 
+Kami juga akan membahas pustaka di luar ekosistem Hugging Face. Ini adalah kontribusi luar biasa untuk komunitas AI dan alat yang sangat berguna.
 
-## Silabus
+Ini sepenuhnya gratis dan tanpa iklan.
 
-Silabus kursus ini adalah sebagai berikut:
+## Memahami NLP dan LLM
+
+Meskipun kursus ini awalnya berfokus pada NLP (Pemrosesan Bahasa Alami), kursus ini telah berevolusi untuk menekankan Large Language Models (LLM), yang mewakili kemajuan terbaru di bidang ini. 
+
+**Apa perbedaannya?**
+- **NLP (Pemrosesan Bahasa Alami)** adalah bidang yang lebih luas yang berfokus pada memungkinkan komputer memahami, menafsirkan, dan menghasilkan bahasa manusia. NLP mencakup banyak teknik dan tugas seperti analisis sentimen, pengenalan entitas bernama, dan terjemahan mesin.
+- **LLM (Large Language Models)** adalah subkumpulan model NLP yang kuat yang dicirikan oleh ukurannya yang masif, data pelatihan yang ekstensif, dan kemampuan untuk melakukan berbagai tugas bahasa dengan pelatihan spesifik tugas yang minimal. Model seperti seri Llama, GPT, atau Claude adalah contoh LLM yang telah merevolusi apa yang mungkin dilakukan dalam NLP.
+
+Sepanjang kursus ini, Anda akan belajar tentang konsep NLP tradisional dan teknik LLM mutakhir, karena memahami fondasi NLP sangat penting untuk bekerja secara efektif dengan LLM.
+
+## Apa yang diharapkan?
+
+Berikut adalah gambaran singkat kursus:
 
 <div class="flex justify-center">
-<img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/summary.svg" alt="Brief overview of the chapters of the course.">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/summary-dark.svg" alt="Brief overview of the chapters of the course.">
+<img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/summary.svg" alt="Gambaran singkat bab-bab kursus.">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/summary-dark.svg" alt="Gambaran singkat bab-bab kursus.">
 </div>
 
-- Bab 1-4 akan mencakup pengenalan konsep-konsep dasar modul 🤗 Transformers. Di akhir bab 4, anda akan tahu bagaimana menggunakan model-model _Transformer_ dari [Hugging Face Hub](https://huggingface.co/models), melakukan model _fine-tuning_ untuk dataset anda, dan membagikan model anda di Hugging Face Hub!
-- Bab 5-8 akan mencakup dasar-dasar dari 🤗 Datasets dan 🤗 Tokenizers sebelum anda diperkenalkan ke kasus-kasus yang dapat ditangani dengan NLP. Diakhir kursus ini, anda akan mampu menangani dan menyelesaikan kasus-kasus NLP.
-- Chapters 9 to 12 go beyond NLP, and explore how Transformer models can be used tackle tasks in speech processing and computer vision. Along the way, you'll learn how to build and share demos of your models, and optimize them for production environments. By the end of this part, you will be ready to apply 🤗 Transformers to (almost) any machine learning problem!
-- Setelah NLP, di bab 9-12, anda akan mengeksplorasi bagaimana model-model Transformer dapat digunakan untuk menangani kasus-kasus lain seperti _speech processing_ (pemrosesan ucapan) dan _computer vision_ (penglihatan komputer). Selain itu, anda akan belajar cara membuat dan membagikan demo (prototype) dari model anda, serta cara mengoptimisasi model anda untuk _production environment_ (penerapan di kasus asli). Di akhir bab 12, anda akan siap mengimplementasikan 🤗 Transformers untuk (hampir) semua kasus _machine learning_ (pembelajaran mesin)!
+- Bab 1 hingga 4 memberikan pengantar tentang konsep utama pustaka 🤗 Transformers. Di akhir bagian kursus ini, Anda akan familiar dengan cara kerja model Transformer dan akan tahu cara menggunakan model dari [Hugging Face Hub](https://huggingface.co/models), melakukan fine-tuning pada dataset, dan berbagi hasil Anda di Hub!
+- Bab 5 hingga 8 mengajarkan dasar-dasar 🤗 Datasets dan 🤗 Tokenizers sebelum menyelami tugas NLP klasik dan teknik LLM. Di akhir bagian ini, Anda akan mampu menangani tantangan pemrosesan bahasa yang paling umum sendiri.
+- Bab 9 melampaui NLP untuk mencakup cara membangun dan berbagi demo model Anda di 🤗 Hub. Di akhir bagian ini, Anda akan siap untuk memamerkan aplikasi 🤗 Transformers Anda kepada dunia!
+- Bab 10 hingga 12 menyelami topik LLM lanjutan seperti fine-tuning, mengkurasi dataset berkualitas tinggi, dan membangun model penalaran.
 
-Syarat mengikuti kursus:
+Kursus ini:
 
-* Requires a good knowledge of Python
-* Pengetahuan mengenai Python
-* Akan lebih baik jika sudah mengenal deep learning dengan mengambil kursus dari [fast.ai](https://www.fast.ai/) "[Practical Deep Learning for Coders](https://course.fast.ai/)" atau program-program yang dikembangkan oleh [DeepLearning.AI](https://www.deeplearning.ai/)
-* Tidak perlu pengetahuan mengenai [PyTorch](https://pytorch.org/) atau [TensorFlow](https://www.tensorflow.org/). Tapi, akan lebih baik jika sudah terbiasa dengan salah satu framework tersebut.
+* Memerlukan pengetahuan yang baik tentang Python
+* Lebih baik diambil setelah kursus pengantar deep learning, seperti [fast.ai's](https://www.fast.ai/) [Practical Deep Learning for Coders](https://course.fast.ai/) atau salah satu program yang dikembangkan oleh [DeepLearning.AI](https://www.deeplearning.ai/)
+* Tidak mengharapkan pengetahuan [PyTorch](https://pytorch.org/) atau [TensorFlow](https://www.tensorflow.org/) sebelumnya, meskipun beberapa keakraban dengan salah satunya akan membantu
 
-Setelah menyelesaikan kursus ini, sangat direkomendasikan untuk mengikuti kursus dari DeepLearning.AI [Natural Language Processing Specialization](https://www.coursera.org/specializations/natural-language-processing?utm_source=deeplearning-ai&utm_medium=institutions&utm_campaign=20211011-nlp-2-hugging_face-page-nlp-refresh) yang akan mencakup model-model NLP klasik seperti naive Bayes dan LSTM. Pengetahuan tersebut akan sangat berharga bagi anda!
+Setelah Anda menyelesaikan kursus ini, kami merekomendasikan untuk memeriksa [Spesialisasi Pemrosesan Bahasa Alami](https://www.coursera.org/specializations/natural-language-processing?utm_source=deeplearning-ai&utm_medium=institutions&utm_campaign=20211011-nlp-2-hugging_face-page-nlp-refresh) DeepLearning.AI, yang mencakup berbagai model NLP tradisional seperti naive Bayes dan LSTM yang sangat layak untuk diketahui!
 
-## Tentang penulis
+## Siapa kami?
 
-**Abubakar Abid** adalah lulusan PhD dari Stanford dengan konsentrasi aplikasi pembelajaran mesin. Sembari menyelesaikan pendidikan PhD, beliau menciptakan [Gradio](https://github.com/gradio-app/gradio), sebuah modul _open-source_ Python yang sudah digunakan untuk membuat lebih dari 600.000 demo (prototype) model _machine learning_. Gradio telah diakusisi oleh Hugging Face, tempat dimana Abubakar bekerja sebagai _machine learning team lead_.
+Tentang penulis:
 
-**Matthew Carrigan** bekerja sebagai _Machine Learning Engineer_ di Hugging Face. Beliau tinggal di Dublin, Irlandia, pernah bekerja sebagai _ML engineer_ di Parse.ly dan sebelumnya merupakan peneliti post-doctoral di Trinity College Dublin. Beliau tidak percaya kita akan mencapai Artificial general intelligence (AGI) dengan menambahkan skala dari arsitektur yang digunakan sekarang, namun memiliki optimisme mengenai imortalitas robot.
+[**Abubakar Abid**](https://huggingface.co/abidlabs) menyelesaikan PhD-nya di Stanford dalam machine learning terapan. Selama PhD-nya, ia mendirikan [Gradio](https://github.com/gradio-app/gradio), pustaka Python open-source yang telah digunakan untuk membangun lebih dari 600.000 demo machine learning. Gradio diakuisisi oleh Hugging Face, yang sekarang menjadi tempat Abubakar menjabat sebagai pemimpin tim machine learning.
 
-**Lysandre Debut** bekerja sebagai _Machine Learning Engineer_ di Hugging Face dan berfokus mengembangkan modul 🤗 Transformers sejak seumur jagung. Beliau mempunya mimpi untuk agar NLP dapat diakses oleh semua orang dengan mengembangkan alat-alat atau aplikasi-aplikasi sederhana menggunkan API.
+[**Ben Burtenshaw**](https://huggingface.co/burtenshaw) adalah Insinyur Machine Learning di Hugging Face. Ia menyelesaikan PhD-nya dalam Pemrosesan Bahasa Alami di University of Antwerp, di mana ia menerapkan model Transformer untuk menghasilkan cerita anak-anak dengan tujuan meningkatkan keterampilan literasi. Sejak itu, ia fokus pada materi dan alat pendidikan untuk komunitas yang lebih luas.
 
-**Sylvain Gugger** adalah _Research Engineer_ di Hugging Face dan merupakan salah satu _maintainer_ dari modul 🤗 Transformers. Beliau pernah bekerja sebagai _Research Scientist_ di fast.ai, dan bersama Jeremy Howard menulis _[Deep Learning for Coders with fastai and PyTorch](https://learning.oreilly.com/library/view/deep-learning-for/9781492045519/)_. Fokus utama dari penelitian beliau adalah membuat _deep learning_ lebih mudah diakses dengan mendesain dan memperbaiki teknik-teknik untuk melatih model dengan sumber daya terbatas.
+[**Matthew Carrigan**](https://huggingface.co/Rocketknight1) adalah Insinyur Machine Learning di Hugging Face. Ia tinggal di Dublin, Irlandia dan sebelumnya bekerja sebagai insinyur ML di Parse.ly dan sebelum itu sebagai peneliti pasca-doktoral di Trinity College Dublin. Ia tidak percaya kita akan mencapai AGI dengan menskalakan arsitektur yang ada, tetapi tetap memiliki harapan tinggi untuk keabadian robot.
 
-**Dawood Khan** bekerja sebagai _Machine Learning Engineer_ di Hugging Face. Beliau berasal dari NYC dan merupakan lulusan New York University jurusan _Computer Science_. Sempat bekerja sebagai iOS _Engineer_ untuk beberapa tahun, Dawood memutuskan untuk _resign_ dan mengembangkan Gradio bersama rekan-rekan co-foundernya. Seiring berjalannya waktu, Gradio diakusisi oleh Hugging Face.
+[**Lysandre Debut**](https://huggingface.co/lysandre) adalah Insinyur Machine Learning di Hugging Face dan telah mengerjakan pustaka 🤗 Transformers sejak tahap pengembangan awal. Tujuannya adalah membuat NLP dapat diakses oleh semua orang dengan mengembangkan alat dengan API yang sangat sederhana.
 
-**Merve Noyan** adalah advokat _developer_ di Hugging Face, beliau bertugas untuk mengembangkan konten beserta medianya untuk mendemokrasikan _machine learning_ untuk semua orang.
+[**Sylvain Gugger**](https://huggingface.co/sgugger) adalah Insinyur Riset di Hugging Face dan salah satu pengelola inti pustaka 🤗 Transformers. Sebelumnya ia adalah Ilmuwan Riset di fast.ai, dan ia ikut menulis _[Deep Learning for Coders with fastai and PyTorch](https://learning.oreilly.com/library/view/deep-learning-for/9781492045519/)_ bersama Jeremy Howard. Fokus utama penelitiannya adalah pada membuat deep learning lebih dapat diakses, dengan merancang dan meningkatkan teknik yang memungkinkan model dilatih dengan cepat pada sumber daya terbatas.
 
-**Lucile Saulnier** adalah _machine learning engineer_ di Hugging Face, bertugas untuk mengembangkan dan mendukung penggunaan alat-alat _open source_. Beliau juga aktif dalam banyak riset mengenai _Natural Language Processing_ seperti _collaborative training_ dan BigScience.
+[**Dawood Khan**](https://huggingface.co/dawoodkhan82) adalah Insinyur Machine Learning di Hugging Face. Ia berasal dari NYC dan lulus dari New York University belajar Ilmu Komputer. Setelah bekerja sebagai Insinyur iOS selama beberapa tahun, Dawood berhenti untuk memulai Gradio bersama rekan pendirinya. Gradio akhirnya diakuisisi oleh Hugging Face.
 
-**Lewis Tunstall**  merupakan _machine learning engineer_ di Hugging Face, bertugas untuk mengembangkan alat-alat _open source_ dan membuatnya dapat diakses oleh komunitas. Beliau juga merupakan salah satu penulis dari buku terbitan O’Reilly berjudul [Natural Language Processing with Transformers](https://www.oreilly.com/library/view/natural-language-processing/9781098136789/).
+[**Merve Noyan**](https://huggingface.co/merve) adalah developer advocate di Hugging Face, mengerjakan pengembangan alat dan pembuatan konten di sekitarnya untuk mendemokratisasi machine learning untuk semua orang.
 
-**Leandro von Werra**  bekerja sebagai _machine learning engineer_ untuk tim _open-source_ di Hugging Face dan juga merupkan salah satu penulis buku [Natural Language Processing with Transformers](https://www.oreilly.com/library/view/natural-language-processing/9781098136789/) yang diterbitkan oleh O'Reilly. Beliau memiliki memiliki pengalaman mengembangkan proyek-proyek NLP untuk kasus nyata pada berbagai macam _machine learning stack_ selama beberapa tahun.
+[**Lucile Saulnier**](https://huggingface.co/SaulLu) adalah insinyur machine learning di Hugging Face, mengembangkan dan mendukung penggunaan alat open source. Ia juga terlibat aktif dalam banyak proyek penelitian di bidang Pemrosesan Bahasa Alami seperti pelatihan kolaboratif dan BigScience.
 
-Sudah siap untuk belajar? Di bab ini anda akan belajar mengenai:
-* Penggunaan fungsi `pipeline()` untuk memecahkan masalah-masalah NLP seperti _text generation_ (pembuatan teks) dan klasifikasi.
-* Arsitektur Transformer
-* Bagaimana membedakan arsitektur encoder, decoder, dan encoder-decoder beserta kasus-kasus terkait.
+[**Lewis Tunstall**](https://huggingface.co/lewtun) adalah insinyur machine learning di Hugging Face, berfokus pada pengembangan alat open-source dan membuatnya dapat diakses oleh komunitas yang lebih luas. Ia juga merupakan penulis bersama buku O'Reilly [Natural Language Processing with Transformers](https://www.oreilly.com/library/view/natural-language-processing/9781098136789/).
+
+[**Leandro von Werra**](https://huggingface.co/lvwerra) adalah insinyur machine learning di tim open-source di Hugging Face dan juga penulis bersama buku O'Reilly [Natural Language Processing with Transformers](https://www.oreilly.com/library/view/natural-language-processing/9781098136789/). Ia memiliki pengalaman industri selama beberapa tahun dalam membawa proyek NLP ke produksi dengan bekerja di seluruh tumpukan machine learning.
+
+## FAQ
+
+Berikut adalah beberapa jawaban untuk pertanyaan yang sering diajukan:
+
+- **Apakah mengikuti kursus ini mengarah ke sertifikasi?**
+Saat ini kami tidak memiliki sertifikasi apa pun untuk kursus ini. Namun, kami sedang mengerjakan program sertifikasi untuk ekosistem Hugging Face -- nantikan!
+
+- **Berapa banyak waktu yang harus saya habiskan untuk kursus ini?**
+Setiap bab dalam kursus ini dirancang untuk diselesaikan dalam 1 minggu, dengan perkiraan 6-8 jam kerja per minggu. Namun, Anda dapat mengambil waktu sebanyak yang Anda butuhkan untuk menyelesaikan kursus.
+
+- **Di mana saya bisa bertanya jika saya memiliki pertanyaan?**
+Jika Anda memiliki pertanyaan tentang bagian apa pun dari kursus, cukup klik spanduk "*Ask a question*" di bagian atas halaman untuk secara otomatis diarahkan ke bagian yang tepat di [forum Hugging Face](https://discuss.huggingface.co/):
+
+<img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/forum-button.png" alt="Tautan ke forum Hugging Face" width="75%">
+
+Perhatikan bahwa daftar [ide proyek](https://discuss.huggingface.co/c/course/course-event/25) juga tersedia di forum jika Anda ingin berlatih lebih banyak setelah menyelesaikan kursus.
+
+- **Di mana saya bisa mendapatkan kode untuk kursus?**
+Untuk setiap bagian, klik spanduk di bagian atas halaman untuk menjalankan kode di Google Colab atau Amazon SageMaker Studio Lab:
+
+<img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/notebook-buttons.png" alt="Tautan ke notebook kursus Hugging Face" width="75%">
+
+Notebook Jupyter yang berisi semua kode dari kursus dihosting di repo [`huggingface/notebooks`](https://github.com/huggingface/notebooks). Jika Anda ingin membuatnya secara lokal, periksa instruksi di repo [`course`](https://github.com/huggingface/course#-jupyter-notebooks) di GitHub.
+
+
+- **Bagaimana saya bisa berkontribusi pada kursus?**
+Ada banyak cara untuk berkontribusi pada kursus! Jika Anda menemukan salah ketik atau bug, silakan buka isu di repo [`course`](https://github.com/huggingface/course). Jika Anda ingin membantu menerjemahkan kursus ke bahasa asli Anda, periksa instruksi [di sini](https://github.com/huggingface/course#translating-the-course-into-your-language).
+
+- **Apa pilihan yang dibuat untuk setiap terjemahan?**
+Setiap terjemahan memiliki glosarium dan file `TRANSLATING.txt` yang merinci pilihan yang dibuat untuk jargon machine learning dll. Anda dapat menemukan contoh untuk bahasa Jerman [di sini](https://github.com/huggingface/course/blob/main/chapters/de/TRANSLATING.txt).
+
+
+- **Bisakah saya menggunakan kembali kursus ini?**
+Tentu saja! Kursus ini dirilis di bawah lisensi permisif [Apache 2](https://www.apache.org/licenses/LICENSE-2.0.html). Ini berarti Anda harus memberikan kredit yang sesuai, menyediakan tautan ke lisensi, dan menunjukkan jika ada perubahan. Anda dapat melakukannya dengan cara yang wajar, tetapi tidak dengan cara apa pun yang menunjukkan bahwa pemberi lisensi mendukung Anda atau penggunaan Anda. Jika Anda ingin mengutip kursus, silakan gunakan BibTeX berikut:
+
+```
+@misc{huggingfacecourse,
+  author = {Hugging Face},
+  title = {The Hugging Face Course, 2022},
+  howpublished = "\url{https://huggingface.co/course}",
+  year = {2022},
+  note = "[Online; accessed <today>]"
+}
+```
+
+## Bahasa dan terjemahan
+
+Berkat komunitas kami yang luar biasa, kursus ini tersedia dalam banyak bahasa selain Inggris 🔥! Lihat tabel di bawah untuk melihat bahasa apa saja yang tersedia dan siapa yang berkontribusi pada terjemahan:
+
+| Bahasa                                                                      | Penulis                                                                                                                                                                                                                                                                                                                                                  |
+|:------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Perancis](https://huggingface.co/course/fr/chapter1/1)                         | [@lbourdois](https://github.com/lbourdois), [@ChainYo](https://github.com/ChainYo), [@melaniedrevet](https://github.com/melaniedrevet), [@abdouaziz](https://github.com/abdouaziz)                                                                                                                                                                       |
+| [Vietnam](https://huggingface.co/course/vi/chapter1/1)                     | [@honghanhh](https://github.com/honghanhh)                                                                                                                                                                                                                                                                                                               |
+| [China (sederhana)](https://huggingface.co/course/zh-CN/chapter1/1)        | [@zhlhyx](https://github.com/zhlhyx), [petrichor1122](https://github.com/petrichor1122), [@yaoqih](https://github.com/yaoqih)                                                                                                                                                                                                                    |
+| [Bengali](https://huggingface.co/course/bn/chapter1/1) (WIP)                  | [@avishek-018](https://github.com/avishek-018), [@eNipu](https://github.com/eNipu)                                                                                                                                                                                                                                                                       |
+| [Jerman](https://huggingface.co/course/de/chapter1/1) (WIP)                   | [@JesperDramsch](https://github.com/JesperDramsch), [@MarcusFra](https://github.com/MarcusFra), [@fabridamicelli](https://github.com/fabridamicelli)                                                                                                                                                                                                     |
+| [Spanyol](https://huggingface.co/course/es/chapter1/1) (WIP)                  | [@camartinezbu](https://github.com/camartinezbu), [@munozariasjm](https://github.com/munozariasjm), [@fordaz](https://github.com/fordaz)                                                                                                                                                                                                                 |
+| [Persia](https://huggingface.co/course/fa/chapter1/1) (WIP)                  | [@jowharshamshiri](https://github.com/jowharshamshiri), [@schoobani](https://github.com/schoobani)                                                                                                                                                                                                                                                       |
+| [Gujarat](https://huggingface.co/course/gu/chapter1/1) (WIP)                 | [@pandyaved98](https://github.com/pandyaved98)                                                                                                                                                                                                                                                                                                           |
+| [Ibrani](https://huggingface.co/course/he/chapter1/1) (WIP)                   | [@omer-dor](https://github.com/omer-dor)                                                                                                                                                                                                                                                                                                                 |
+| [Hindi](https://huggingface.co/course/hi/chapter1/1) (WIP)                    | [@pandyaved98](https://github.com/pandyaved98)                                                                                                                                                                                                                                                                                                           |
+| [Bahasa Indonesia](https://huggingface.co/course/id/chapter1/1) (WIP)         | [@gstdl](https://github.com/gstdl)                                                                                                                                                                                                                                                                                                                       |
+| [Italia](https://huggingface.co/course/it/chapter1/1) (WIP)                  | [@CaterinaBi](https://github.com/CaterinaBi), [@ClonedOne](https://github.com/ClonedOne),    [@Nolanogenn](https://github.com/Nolanogenn), [@EdAbati](https://github.com/EdAbati), [@gdacciaro](https://github.com/gdacciaro)                                                                                                                            |
+| [Jepang](https://huggingface.co/course/ja/chapter1/1) (WIP)                 | [@hiromu166](https://github.com/@hiromu166), [@younesbelkada](https://github.com/@younesbelkada), [@HiromuHota](https://github.com/@HiromuHota)                                                                                                                                                                                                          |
+| [Korea](https://huggingface.co/course/ko/chapter1/1) (WIP)                   | [@Doohae](https://github.com/Doohae), [@wonhyeongseo](https://github.com/wonhyeongseo), [@dlfrnaos19](https://github.com/dlfrnaos19)                                                                                                                                                                                                                     |
+| [Portugis](https://huggingface.co/course/pt/chapter1/1) (WIP)               | [@johnnv1](https://github.com/johnnv1), [@victorescosta](https://github.com/victorescosta), [@LincolnVS](https://github.com/LincolnVS)                                                                                                                                                                                                                   |
+| [Rusia](https://huggingface.co/course/ru/chapter1/1) (WIP)                  | [@pdumin](https://github.com/pdumin), [@svv73](https://github.com/svv73)                                                                                                                                                                                                                                                                                 |
+| [Thailand](https://huggingface.co/course/th/chapter1/1) (WIP)                     | [@peeraponw](https://github.com/peeraponw), [@a-krirk](https://github.com/a-krirk), [@jomariya23156](https://github.com/jomariya23156), [@ckingkan](https://github.com/ckingkan)                                                                                                                                                                         |
+| [Turki](https://huggingface.co/course/tr/chapter1/1) (WIP)                  | [@tanersekmen](https://github.com/tanersekmen), [@mertbozkir](https://github.com/mertbozkir), [@ftarlaci](https://github.com/ftarlaci), [@akkasayaz](https://github.com/akkasayaz)                                                                                                                                                                       |
+| [China (tradisional)](https://huggingface.co/course/zh-TW/chapter1/1) (WIP) | [@davidpeng86](https://github.com/davidpeng86)                                                                                                                                                                                                                                                                                                                   |
+
+Untuk beberapa bahasa, [video kursus YouTube](https://youtube.com/playlist?list=PLo2EIpI_JMQvWfQndUesu0nPBAtZ9gP1o) memiliki subtitle dalam bahasa tersebut. Anda dapat mengaktifkannya dengan terlebih dahulu mengklik tombol _CC_ di pojok kanan bawah video. Kemudian, di bawah ikon pengaturan ⚙️, Anda dapat memilih bahasa yang Anda inginkan dengan memilih opsi _Subtitles/CC_.
+
+<img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/subtitles.png" alt="Mengaktifkan subtitle untuk video YouTube kursus Hugging Face" width="75%">
+
+<Tip>
+Tidak melihat bahasa Anda di tabel di atas atau Anda ingin berkontribusi pada terjemahan yang sudah ada? Anda dapat membantu kami menerjemahkan kursus dengan mengikuti instruksi <a href="https://github.com/huggingface/course#translating-the-course-into-your-language">di sini</a>.
+</Tip>
+
+## Ayo mulai 🚀
+
+Apakah Anda siap? Di bab ini, Anda akan belajar:
+
+* Cara menggunakan fungsi `pipeline()` untuk menyelesaikan tugas NLP seperti pembuatan teks dan klasifikasi
+* Tentang arsitektur Transformer
+* Cara membedakan arsitektur encoder, decoder, dan encoder-decoder serta kasus penggunaannya
