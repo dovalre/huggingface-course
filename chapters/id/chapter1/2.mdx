@@ -1,27 +1,55 @@
-# Pemrosesan Bahasa Natural (Natural Language Processing)
+# Pemrosesan Bahasa Alami (NLP) dan Model Bahasa Besar (LLM)
 
 <CourseFloatingBanner
     chapter={1}
     classNames="absolute z-10 right-0 top-0"
 />
 
-Sebelum mempelajari mengenai model-model Transformer, mari menyamakan persepsi mengenai _natural language processing_ (NLP) terlebih dahulu.
+Sebelum membahas model Transformer, mari kita tinjau sekilas apa itu pemrosesan bahasa alami, bagaimana model bahasa besar telah mengubah bidang ini, dan mengapa ini penting.
 
-## NLP itu apa?
+## Apa itu NLP?
 
-NLP merupakan cabang ilmu linguistik dan pembelajaran mesin (_machine learning_) yang bertujuan untuk memahami bahasa manusia sehari-hari. Tujuan dari penerapan NLP tidak terbatas pada pemahaman kata per kata saja, tapi juga mengenai konteks yang terkandung dalam setiap ucapan/kata.
+<Youtube id="iNzlxWUAjd4" />
 
-Beberapa penerapan NLP yang umum diterapkan beserta contohnya dapat dilihat dibawah:
+NLP adalah bidang linguistik dan machine learning yang berfokus pada pemahaman segala hal terkait bahasa manusia. Tujuan tugas NLP bukan hanya memahami kata-kata secara individual, tetapi mampu memahami konteks kata-kata tersebut.
 
-- **Klasifikasi kalimat secara utuh**: Mengetahui sentimen dari sebuah review, mendeteksi email spam, menentukan ketepatan tata bahasa sebuah kalimat atau mencari tahu keterkaitan antar 2 kalimat
-- **Classifying each word in a sentence**: Identifying the grammatical components of a sentence (noun, verb, adjective), or the named entities (person, location, organization)
-- **Klasifikasi setiap kata dalam sebuah kalimat**: Pengelompokkan unsur kalimat (kata benda, kata kerja, kata sifat), atau pengelompokkan subjek kalimat (orang, lokasi, organisasi)
-- **Menciptakan/menambahkan/memperkaya kalimat**: Menyelesaikan kalimat dengan teks yang diciptakan secara otomatis, mengisi titik-titik pada sebuah kuis
-- **Menjawab pertanyaan**: Dengan memberi model daftar pertanyaan beserta konteks, menjawab pertanyaan berdasar informasi yang tersedia
-- **Menciptakan kalimat baru dari teks**: Menerjemahkan suatu bahasa ke bahasa lain, menyimpulkan kalimat
+Berikut daftar tugas NLP umum beserta contohnya:
 
-Penerapan NLP tidak hanya terbatas pada teks. NLP juga dapat diterapkan untuk menangani kasus pengelan suara (_speech recognition_) dan penglihatan komputer (_computer vision_) seperti menciptakan transkrip dari sampel suara (audio) atau deskripsi gambar.
+- **Mengklasifikasikan seluruh kalimat**: Mengetahui sentimen ulasan, mendeteksi apakah email adalah spam, menentukan apakah kalimat benar secara tata bahasa atau apakah dua kalimat terkait secara logis
+- **Mengklasifikasikan setiap kata dalam kalimat**: Mengidentifikasi komponen tata bahasa (kata benda, kata kerja, kata sifat), atau entitas bernama (orang, lokasi, organisasi)
+- **Menghasilkan konten teks**: Melengkapi prompt dengan teks yang dihasilkan otomatis, mengisi bagian yang kosong dalam teks
+- **Mengekstrak jawaban dari teks**: Diberikan pertanyaan dan konteks, mengekstrak jawaban berdasarkan informasi dalam konteks
+- **Menghasilkan kalimat baru dari teks masukan**: Menerjemahkan teks ke bahasa lain, meringkas teks
 
-## Tantangan-tantangan dalam penerapan NLP
+NLP tidak terbatas pada teks tertulis. Ini juga menangani tantangan kompleks dalam pengenalan suara dan computer vision, seperti membuat transkrip sampel audio atau deskripsi gambar.
 
-Komputer tidak dapat memahami informasi secara langsung maupun secara harfiah seperti manusia. Sebagai contoh, ketika membaca kalimat "Saya lapar", manusia dapat dengan mudah memahami maknanya. Begitu juga jika ketika membaca kalimat "Saya lapar" dan "Saya sedih", manusia dapat dengan memudah menentukan apakah kedua kalimat memiliki kemiripan atau tidak. Tapi hal-hal tersebut sulit dipahami oleh model pembelajaran mesin (_machine learning_ (ML)). Kalimat-kalimat tersebut perlu direkayasa (diolah) sedimikian rupa sehingga dapat dipelajari oleh model ML. Ditambah dengan keunikan setiap bahasa/teks, kompleksitas rekayasa yang perlu dilakukan menjadi tantangan tersendiri. Sudah ada banyak riset yang meneliti mengenai bagaiman merekayasa teks untuk penerapan ML dan anda akan mempelajarinya di bab-bab berikutnya.
+## Kebangkitan Model Bahasa Besar (LLM)
+
+Dalam beberapa tahun terakhir, bidang NLP telah direvolusi oleh Large Language Models (LLM). Model-model ini, yang mencakup arsitektur seperti GPT (Generative Pre-trained Transformer) dan [Llama](https://huggingface.co/meta-llama), telah mengubah apa yang mungkin dalam pemrosesan bahasa.
+
+<Tip>
+
+Model bahasa besar (LLM) adalah model AI yang dilatih pada sejumlah besar data teks, mampu memahami dan menghasilkan teks mirip manusia, mengenali pola bahasa, dan melakukan beragam tugas bahasa tanpa pelatihan spesifik tugas. Mereka mewakili kemajuan signifikan dalam bidang pemrosesan bahasa alami (NLP).
+
+</Tip>
+
+LLM dicirikan oleh:
+- **Skala**: Mengandung jutaan, miliaran, atau bahkan ratusan miliar parameter
+- **Kemampuan umum**: Dapat melakukan banyak tugas tanpa pelatihan spesifik tugas
+- **Pembelajaran dalam konteks**: Dapat belajar dari contoh yang disediakan dalam prompt
+- **Kemampuan muncul**: Saat model bertambah besar, mereka menunjukkan kemampuan yang tidak diprogram atau diantisipasi sebelumnya
+
+Kehadiran LLM telah menggeser paradigma dari membangun model khusus untuk tugas NLP spesifik ke menggunakan satu model besar yang dapat dipicu atau disesuaikan untuk menangani beragam tugas bahasa. Ini membuat pemrosesan bahasa canggih lebih mudah diakses sambil memperkenalkan tantangan baru di bidang efisiensi, etika, dan penyebaran.
+
+Namun, LLM juga memiliki keterbatasan penting:
+- **Halusinasi**: Dapat menghasilkan informasi salah dengan percaya diri
+- **Kurangnya pemahaman sejati**: Tidak memiliki pemahaman sejati tentang dunia dan beroperasi murni pada pola statistik
+- **Bias**: Dapat mereproduksi bias yang ada dalam data pelatihan atau masukan
+- **Jendela konteks**: Memiliki jendela konteks terbatas (meskipun ini membaik)
+- **Sumber daya komputasi**: Membutuhkan sumber daya komputasi signifikan
+
+## Mengapa pemrosesan bahasa menantang?
+
+Komputer tidak memproses informasi dengan cara yang sama seperti manusia. Misalnya, saat membaca kalimat "Saya lapar", kita mudah memahami maknanya. Demikian pula, dengan dua kalimat seperti "Saya lapar" dan "Saya sedih", kita mudah menentukan kesamaannya. Bagi model machine learning (ML), tugas seperti ini lebih sulit. Teks perlu diproses dengan cara yang memungkinkan model belajar darinya. Dan karena bahasa kompleks, kita perlu memikirkan dengan cermat bagaimana pemrosesan ini harus dilakukan. Banyak penelitian telah dilakukan tentang cara merepresentasikan teks, dan kita akan melihat beberapa metode di bab berikutnya.
+
+Bahkan dengan kemajuan dalam LLM, banyak tantangan mendasar tetap ada. Ini termasuk memahami ambiguitas, konteks budaya, sarkasme, dan humor. LLM mengatasi tantangan ini melalui pelatihan masif pada kumpulan data beragam, tetapi masih sering kali tidak mencapai pemahaman setara manusia dalam banyak skenario kompleks.
